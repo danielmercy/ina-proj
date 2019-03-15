@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary: #1184ff;
+    --accent: #06FCCA;
+    --warning: #FF4004;
+    --background: #141936;
+    --app-bar: #1A1F3D;
+    --card-bg: #1A1F3D;
+    --background-variant_1: #383d58;
+    --foreground: #545977;
+    --white: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+button[mat-raised-button], button[mat-button], a[mat-raised-button], a[mat-button] {
+    padding: 0 30px;
+    border-radius: 25px;
+    width: 112px;
+}

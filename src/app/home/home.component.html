@@ -1,0 +1,107 @@
+<div class="main">
+    <div class="container">
+      <header>
+        <div class="mock_logo">
+          <span class="logo"></span>
+          <div class="col">
+              <span>SOLAR GRID</span>
+              <span>We make green energy.</span>
+          </div>
+        </div>
+
+        <div class="hero">
+          <solar-typograph preset="fancy" mstyle="normal">
+            <span>Secure. Safe. Maintenable</span>
+          </solar-typograph>
+          <solar-typograph preset="hero" mstyle="normal">
+            <span>Solar grid</span>
+          </solar-typograph>
+          <solar-typograph preset="hardHero" mstyle="normal" style="margin: 0">
+            <span>More than just solar.</span>
+          </solar-typograph>
+          <solar-typograph preset="description" mstyle="normal">
+            <span>Go solar and save more, have a better budget on your electricity comsumption
+                that lasts longer and full control over the appliances in your home with no
+                hassle guaranteed.</span>
+          </solar-typograph>
+
+          <div class="actions">
+            <solar-button text="Go solar" color="accent" (click)="onclick()" style="margin-left: 0"></solar-button>
+            <solar-button text="Login" color="primary"></solar-button>
+          </div>
+        </div>
+      </header>
+
+      <section class="web_dashboard">
+        <span class="dashboard"></span>
+        <img src="../../assets/images/dashboard.svg" alt="dashboard image">
+      </section>
+
+      <section class="features" id="features">
+        <img src="../../assets/images/mobile-home.svg" id="mhome" alt="Mobile home view">
+        <img src="../../assets/images/mobile-dashboard.svg" id="mdash" alt="Mobile dashboard view">
+        
+        <div class="feature">
+          <div class="stepper">
+            <div class="item">
+              <span class="indicator">1</span>
+              <div class="details">
+                  <solar-typograph preset="fancy" mstyle="normal" style="text-align: end;margin: 0;">Tracking</solar-typograph>
+                  <solar-typograph preset="description" mstyle="normal" style="text-align: end; ">
+                      Keep track of all your devices with an intuitive
+                      dashboard design.
+                  </solar-typograph>
+              </div>
+            </div>
+            <div class="item">
+              <span class="indicator">2</span>
+              <div class="details">
+                  <solar-typograph preset="fancy" mstyle="normal" style="text-align: end;margin: 0;">MONITORING</solar-typograph>
+                  <solar-typograph preset="description" mstyle="normal" style="text-align: end; ">
+                    Monitor your appliances anywhere, anytime on your mobile phone and web
+                  </solar-typograph>
+              </div>
+            </div>
+            <div class="item">
+              <span class="indicator">3</span>
+              <div class="details">
+                  <solar-typograph preset="fancy" mstyle="normal" style="text-align: end;margin: 0;">MAINTENANCE</solar-typograph>
+                  <solar-typograph preset="description" mstyle="normal" style="text-align: end; ">
+                      Manage and maintain  your energy consumption
+                      right from your fingertips. 
+                  </solar-typograph>
+              </div>
+            </div>
+            <div class="item">
+              <span class="indicator">4</span>
+              <div class="details">
+                  <solar-typograph preset="fancy" mstyle="normal" style="text-align: end;margin: 0;">Tracking</solar-typograph>
+                  <solar-typograph preset="description" mstyle="normal" style="text-align: end; ">
+                    Monitor your appliances anywhere, anytime on your mobile phone and web
+                  </solar-typograph>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="container">
+          <div class="content">
+              <div class="links">
+                  <a href="#" mat-button color="accent">Go solar</a>
+                  <a href="#" mat-button color="primary">Login</a>
+                  <a href="#features" mat-button color="primary">Features</a>
+                </div>
+                <div class="mock_logo">
+                  <span class="logo"></span>
+                  <div class="col">
+                      <span>SOLAR GRID</span>
+                      <span>We make green energy.</span>
+                  </div>
+                </div>
+          </div>
+      </div>
+    </footer>
+</div>

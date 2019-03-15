@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+
+// always include only once per project
+@include mat-core();
+
+// define 3 theme color
+// mat-palette accepts $palette-name, main, lighter and darker variants
+$my-theme-primary: mat-palette($mat-blue, 650);
+$my-theme-accent: mat-palette($mat-teal, A450);
+$my-theme-warn: mat-palette($mat-deep-orange, A450);
+
+// create theme (use mat-dark-theme for themes with dark backgrounds)
+$my-theme: mat-dark-theme(
+    $my-theme-primary,
+    $my-theme-accent,
+    $my-theme-warn
+);
+
+// $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+@include angular-material-theme($my-theme);
