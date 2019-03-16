@@ -1,6 +1,6 @@
 <div class="main">
     <div class="container">
-      <header>
+      <header id="top">
         <div class="mock_logo">
           <span class="logo"></span>
           <div class="col">
@@ -26,8 +26,9 @@
           </solar-typograph>
 
           <div class="actions">
-            <solar-button text="Go solar" color="accent" (click)="onclick()" style="margin-left: 0"></solar-button>
-            <solar-button text="Login" color="primary"></solar-button>
+              <a routerLink="auth/registration" mat-raised-button color="accent">Go solar</a>
+              <span style="width: 20px; display: inline-block;"></span>
+              <a routerLink="auth/login" mat-raised-button color="primary">Login</a>
           </div>
         </div>
       </header>
@@ -90,9 +91,10 @@
       <div class="container">
           <div class="content">
               <div class="links">
-                  <a href="#" mat-button color="accent">Go solar</a>
-                  <a href="#" mat-button color="primary">Login</a>
+                  <a routerLink="auth/registration" mat-button color="accent">Go solar</a>
+                  <a routerLink="auth/login" mat-button color="primary">Login</a>
                   <a href="#features" mat-button color="primary">Features</a>
+                  <a href="#top" mat-button color="primary">Top</a>
                 </div>
                 <div class="mock_logo">
                   <span class="logo"></span>

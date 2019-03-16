@@ -1,3 +1,68 @@
-<p>
-  login works!
-</p>
+<div class="main">
+  <div class="login_area">
+    <div class="container">
+      <div class="header">
+        <solar-typograph preset="hero" mstyle="normal" size="30px" weight="bold" style="letter-spacing: 1px">Welcome Back</solar-typograph>
+        <solar-typograph preset="description" mstyle="normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi labore consequatur placeat accusantium deleniti rerum aspernatur alias cupiditate sit.</solar-typograph>
+      </div>
+
+      <div class="body">
+        <form>
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input matInput type="email" placeholder="e.g danielmercy@solargrid.io" required>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Password</mat-label>
+              <input matInput type="password" required>
+            </mat-form-field>
+
+            <mat-slide-toggle color="primary">Remember me</mat-slide-toggle> <br />
+            <br />
+            <solar-button color="primary" text="Login" style="margin: 0"></solar-button>
+            <br />
+            <solar-typograph preset="description" mstyle="normal" style="display: inline-block;margin: 20px 0;">
+              <span>Yet to install the solar grid in your home?</span>
+              <a routerLink="/auth/registration" mat-button color="accent">Go solar</a>
+            </solar-typograph>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="detail_area">
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="body">
+        <div class="content">
+          <solar-typograph preset="hero" mstyle="normal">Log in.</solar-typograph>
+          <solar-typograph preset="description" mstyle="normal"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quo sint officiis! Velit cum, corporis blanditiis asperiores quam nihil? Deleniti deserunt assumenda reiciendis rem accusamus dolore quaerat accusantium eum voluptatibus. </solar-typograph>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="left">
+          <a mat-icon-button routerLink="#" color="primary">
+              <mat-icon class="mat-18">facebook</mat-icon>
+          </a>
+          <a mat-icon-button routerLink="#" color="primary">
+              <mat-icon class="mat-18">goolge</mat-icon>
+          </a>
+          <a mat-icon-button routerLink="#" color="primary">
+              <mat-icon class="mat-18">linkedin</mat-icon>
+          </a>
+        </div>
+        <div class="right">
+          <a routerLink="/auth/registration" mat-button color="accent">Go solar</a>
+          <a routerLink="" mat-button color="primary">Home</a>
+          <a href="/#features" mat-button color="primary">Features</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

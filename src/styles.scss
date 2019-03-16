@@ -18,9 +18,23 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.container {
+    max-width: calc(100vw * 0.9);
+    width: 100%;
+    margin: 0 auto;
+}
+
 
 button[mat-raised-button], button[mat-button], a[mat-raised-button], a[mat-button] {
     padding: 0 30px;
     border-radius: 25px;
     width: 112px;
+}
+
+input[matInput] {
+    color: var(--white);
+}
+
+mat-slide-toggle {
+    color: var(--white);
 }
