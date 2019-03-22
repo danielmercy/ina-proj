@@ -18,6 +18,28 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+span.facebook, span.google, span.linkedin, span.office {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.facebook {
+    background: url('./assets/images/facebook.svg') no-repeat;
+}
+
+.google {
+    background: url('./assets/images/google.svg') no-repeat;
+}
+
+.linkedin {
+    background: url('./assets/images/linkedin.svg') no-repeat;
+}
+
+.office {
+    background: url('./assets/images/office.svg') no-repeat;
+}
+
 .container {
     max-width: calc(100vw * 0.9);
     width: 100%;
@@ -35,6 +57,23 @@ input[matInput] {
     color: var(--white);
 }
 
+[matSuffix] {
+    font-size: 18px !important;
+}
+
 mat-slide-toggle {
     color: var(--white);
+}
+
+.mat-stepper-horizontal {
+    background: transparent !important;
+}
+
+.mat-radio-checked .mat-radio-label .mat-radio-label-content {
+    solar-card {
+        mat-card {
+            border: 2px solid var(--accent) !important;
+            transition: all 50ms;
+        }
+    }
 }

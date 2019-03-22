@@ -1,3 +1,163 @@
-<p>
-  registration works!
-</p>
+<div class="main">
+  <div class="registration_area">
+    <div class="container">
+      <div class="body">
+        <mat-horizontal-stepper labelPosition="bottom" #stepper>
+
+          <!-- Genaral Tab-->
+          <mat-step [editable]="isEditable">
+            <form [formGroup]="generalForm">
+              <ng-template matStepLabel>General</ng-template>
+
+              <div class="horz">
+                <mat-form-field class="prefix">
+                  <mat-label>Title</mat-label>
+                  <mat-select formControlName="title">
+                    <mat-option value="mr">Mr.</mat-option>
+                    <mat-option value="mrs">Mrs.</mat-option>
+                    <mat-option value="miss">Miss.</mat-option>
+                    <mat-option value="sir">Sir.</mat-option>
+                  </mat-select>
+                  <mat-hint><strong>e.g &nbsp;</strong>Mr.</mat-hint>
+                </mat-form-field>
+  
+                <mat-form-field class="field">
+                  <mat-label>Full name</mat-label>
+                  <input matInput formControlName="fullName" type="text" required>
+                  <mat-hint>Daniel Mercy</mat-hint>
+                </mat-form-field>
+              </div>
+
+              <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" type="email" required>
+                <mat-hint><strong>e.g &nbsp;</strong>danielmercy@solargrid.io</mat-hint>
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" [type]="hide ? 'text' : 'password'" minlength="6" maxlength="12" required>
+                <button mat-icon-button (click)="hide = !hide" matSuffix color="accent">
+                  <mat-icon *ngIf="hide">visibility</mat-icon>
+                  <mat-icon *ngIf="!hide">visibility_off</mat-icon>
+                </button>
+                <mat-hint>Must contain an uppercase and a special character</mat-hint>
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-label>Confirm Password</mat-label>
+                <input matInput formControlName="confirmPassword" [type]="hide ? 'text' : 'password'" minlength="6" maxlength="12" required>
+                <button mat-icon-button (click)="hide = !hide" matSuffix color="accent">
+                    <mat-icon class="mat-18" *ngIf="hide">visibility</mat-icon>
+                    <mat-icon class="mat-18" *ngIf="!hide">visibility_off</mat-icon>
+                </button>
+              </mat-form-field>
+            </form>
+            <button mat-raised-button [disabled]="!generalFormValid" matStepperNext color="primary" style="width: 100%">Next</button>
+          </mat-step>
+
+          <!-- Location tab -->
+          <mat-step [editable]="isEditable">
+            <form [formGroup]="locationForm">
+              <ng-template matStepLabel>Location</ng-template>
+              <mat-form-field appearance="standard">
+                <mat-label>APC</mat-label>
+                <input matInput formControlName="apc" type="number" placeholder="e.g 500" required>
+                <solar-typograph matSuffix mstyle="normal" preset="fancy">KWH</solar-typograph>
+                <mat-hint>Average power consumption in <strong>Kwh</strong></mat-hint>
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="address" type="text" placeholder="" required>
+                <mat-hint><strong>e.g </strong> Route 13, Allen Eves 209</mat-hint>
+              </mat-form-field>
+
+              <div class="horz">
+                <mat-form-field>
+                  <input matInput formControlName="city" placeholder="City" required>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput formControlName="state" placeholder="State" required>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput formControlName="postalCode" #postalCode maxlength="5" placeholder="Postal Code" value="94043" required/>
+                  <mat-hint>{{postalCode.value.length}} / 5</mat-hint>
+                </mat-form-field>
+              </div>
+
+              <mat-form-field>
+                <mat-label>Phone</mat-label>
+                <solar-typograph matPrefix mstyle="normal" preset="fancy">+234 &nbsp;</solar-typograph>
+                <input matInput formControlName="phone" type="number" maxlength="10" required #phone>
+                <mat-hint><strong>e.g </strong> 80 200 07623</mat-hint>
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-label>Location (Coordinates)</mat-label>
+                <input matInput formControlName="location" type="text" required>
+                <mat-hint><strong>e.g &nbsp;</strong> -1029129, 219012</mat-hint>
+              </mat-form-field>
+            </form>
+            <button mat-raised-button matStepperNext color="primary" style="width: 100%">Next</button>
+          </mat-step>
+
+          <!-- Plan tab -->
+          <mat-step [editable]="isEditable">
+            <form [formGroup]="planForm">
+              <ng-template matStepLabel>Choose a plan</ng-template>
+              <mat-radio-group formControlName="plan" aria-required="true" required>
+                <mat-radio-button [value]="plan.value" *ngFor="let plan of plans">
+                  <solar-card color="background" width="full">
+                      <solar-typograph preset="fancy" mstyle="normal">{{plan.title}}</solar-typograph> <br>
+                      {{plan.price}} <br>
+                      {{plan.discount}}
+                  </solar-card>
+                </mat-radio-button>
+                </mat-radio-group>
+            </form>
+            <button mat-raised-button matStepperNext color="primary" style="width: 100%">Finish</button>
+          </mat-step>
+        </mat-horizontal-stepper>
+      </div>
+    </div>
+  </div>
+  <div class="detail_area">
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="body">
+        <div class="content">
+          <solar-typograph preset="hero" mstyle="normal">Going solar.</solar-typograph>
+          <solar-typograph preset="description" mstyle="normal"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quo sint officiis! Velit cum, corporis blanditiis asperiores quam nihil? Deleniti deserunt assumenda reiciendis rem accusamus dolore quaerat accusantium eum voluptatibus. </solar-typograph>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="left">
+          <a mat-icon-button routerLink="#" color="primary">
+              <span class="mat-18 facebook"></span>
+          </a>
+          <a mat-icon-button routerLink="#" color="primary">
+              <span class="mat-18 google"></span>
+          </a>
+          <a mat-icon-button routerLink="#" color="primary">
+              <span class="mat-18 linkedin"></span>
+          </a>
+          <a mat-icon-button routerLink="#" color="primary">
+              <span class="mat-18 office"></span>
+          </a>
+        </div>
+        <div class="right">
+          <a routerLink="/auth/login" mat-button color="accent">Login</a>
+          <a routerLink="" mat-button color="primary">Home</a>
+          <a href="/#features" mat-button color="primary">Features</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

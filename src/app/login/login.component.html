@@ -7,18 +7,18 @@
       </div>
 
       <div class="body">
-        <form>
+        <form [formGroup]="loginForm">
             <mat-form-field>
               <mat-label>Email</mat-label>
-              <input matInput type="email" placeholder="e.g danielmercy@solargrid.io" required>
+              <input matInput type="email" formControlName="email" placeholder="e.g danielmercy@solargrid.io" required>
             </mat-form-field>
 
             <mat-form-field>
               <mat-label>Password</mat-label>
-              <input matInput type="password" required>
+              <input matInput formControlName="password" type="password" required>
             </mat-form-field>
 
-            <mat-slide-toggle color="primary">Remember me</mat-slide-toggle> <br />
+            <mat-slide-toggle formControlName="rememberMe" color="primary">Remember me</mat-slide-toggle> <br />
             <br />
             <solar-button color="primary" text="Login" style="margin: 0"></solar-button>
             <br />
@@ -48,13 +48,16 @@
       <div class="footer">
         <div class="left">
           <a mat-icon-button routerLink="#" color="primary">
-              <mat-icon class="mat-18">facebook</mat-icon>
+              <span class="mat-18 facebook"></span>
           </a>
           <a mat-icon-button routerLink="#" color="primary">
-              <mat-icon class="mat-18">goolge</mat-icon>
+              <span class="mat-18 google"></span>
           </a>
           <a mat-icon-button routerLink="#" color="primary">
-              <mat-icon class="mat-18">linkedin</mat-icon>
+              <span class="mat-18 linkedin"></span>
+          </a>
+          <a mat-icon-button routerLink="#" color="primary">
+              <span class="mat-18 office"></span>
           </a>
         </div>
         <div class="right">

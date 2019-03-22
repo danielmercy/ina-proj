@@ -1,4 +1,26 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
 mat-card {
-    padding: 16px 30px;
+    padding: 16px;
     border-radius: 10px;
+}
+
+mat-card {
+    background: var(--background) !important;
+    box-sizing: border-box;
+
+    &.full-width {
+        width: 100% !important;
+    }
+}
+
+::ng-deep .mat-radio-container {
+    display: none;
+}
+
+mat-radio-button.mat-radio-checked{
+    background: red;
 }
