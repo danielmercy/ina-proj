@@ -6,6 +6,9 @@ import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
   {
+    path: 'manager',
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
+  },{
     path: '',
     component: HomeComponent
   },{
@@ -14,6 +17,10 @@ const routes: Routes = [
   },{
     path: 'auth/registration',
     component: RegistrationComponent
+  },{
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 
