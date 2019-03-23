@@ -10,7 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 
 import 'hammerjs';
-import { DashboardModule } from './dashboard/dashboard.module'
+import { DashboardModule } from './dashboard/dashboard.module';
+import { CoreModule } from './core/core.module'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DashboardModule } from './dashboard/dashboard.module'
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
-    DashboardModule
+    DashboardModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
