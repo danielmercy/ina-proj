@@ -3,6 +3,7 @@ import { Routes, RouterModule, LoadChildren } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,7 @@ const routes: Routes = [
   },{
     path: '',
     loadChildren: './dashboard/dashboard.module#DashboardModule'
-  }
+  },{ path: '**', component: PagenotfoundComponent }
 ];
 
 @NgModule({

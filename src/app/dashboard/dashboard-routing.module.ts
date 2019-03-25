@@ -13,7 +13,6 @@ const routes: Routes = [
       {
         path: 'stats/:id',
         component: StatisticsComponent,
-
       },{
         path: 'profile/:id',
         component: ProfileComponent

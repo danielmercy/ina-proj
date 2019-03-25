@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { AuthenticationService } from 'src/app/core/services/authentication.service';
 
 @Component({
   selector: 'app-manager',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagerComponent implements OnInit {
 
-  constructor() { }
+  id: string;
+
+  constructor(public router: Router,public auth: AuthenticationService) { 
+    this.id = this.auth.ID
+    if(this.id) {
+      console.log(this.id)
+      this.router.navigateByUrl(`manager/stats/${this.id}`);
+    }
+   }
 
   ngOnInit() {
+    
   }
+  
 
 }
