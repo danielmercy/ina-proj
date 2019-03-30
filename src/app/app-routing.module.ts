@@ -20,7 +20,7 @@ const routes: Routes = [
     path: 'auth/registration',
     component: RegistrationComponent
   },{
-    path: '',
+    path: 'manager',
     loadChildren: './dashboard/dashboard.module#DashboardModule'
   },{ path: '**', component: PagenotfoundComponent }
 ];

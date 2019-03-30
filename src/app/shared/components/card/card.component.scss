@@ -1,11 +1,11 @@
 :host {
     display: block;
-    width: 100%;
 }
 
 mat-card {
     padding: 16px;
     border-radius: 10px;
+    width: 100%;
 }
 
 mat-card {
@@ -21,6 +21,4 @@ mat-card {
     display: none;
 }
 
-mat-radio-button.mat-radio-checked{
-    background: red;
-}
+

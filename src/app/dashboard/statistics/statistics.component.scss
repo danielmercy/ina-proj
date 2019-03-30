@@ -1,0 +1,43 @@
+.graph {
+    width: 100%;
+    height: 300px;
+
+    solar-typograph {
+        display: block;
+        margin-bottom: 8px; 
+    }
+
+    ::ng-deep mat-card {
+        height: 300px !important;
+        background: var(--app-bar) !important;
+    }
+}
+
+.scroll-x {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-top: 23px;
+    padding: 0 32px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+
+    solar-card {
+        display: inline-block;
+        margin-right: 23px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        ::ng-deep mat-card {
+            width: 433px;
+            height: 147px;
+            background: var(--app-bar) !important;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        visibility: hidden;
+    }
+}

@@ -1,11 +1,12 @@
 <div class="main">
+    <div class="circuit_rain"></div>
     <div class="container">
       <header id="top">
         <div class="mock_logo">
           <span class="logo"></span>
           <div class="col">
-              <span>SOLAR GRID</span>
-              <span>We make green energy.</span>
+              <span>Ina Elektrics</span>
+              <span>promoting green energy and finance.</span>
           </div>
         </div>
 
@@ -13,11 +14,11 @@
           <solar-typograph preset="fancy" mstyle="normal">
             <span>Secure. Safe. Maintenable</span>
           </solar-typograph>
-          <solar-typograph preset="hero" mstyle="normal">
-            <span>Solar grid</span>
+          <solar-typograph preset="hero" mstyle="normal" size="30px">
+            <span>IoT device for all kinds of power grids</span>
           </solar-typograph>
           <solar-typograph preset="hardHero" mstyle="normal" style="margin: 0">
-            <span>More than just solar.</span>
+            <span>More than just power.</span>
           </solar-typograph>
           <solar-typograph preset="description" mstyle="normal">
             <span>Go solar and save more, have a better budget on your electricity comsumption
@@ -30,15 +31,36 @@
               <span style="width: 20px; display: inline-block;"></span>
               <a routerLink="auth/login" mat-raised-button color="primary">Login</a>
           </div>
+
+          <span class="isometric_circuit"></span>
         </div>
       </header>
 
-      <section class="web_dashboard">
-        <span class="dashboard"></span>
-        <img src="../../assets/images/dashboard.svg" alt="dashboard image">
-      </section>
+    </div>
 
-      <section class="features" id="features">
+    <section class="web_dashboard">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="content">
+          <div class="left">
+            <div id="layer1"></div>
+          </div>
+          <div class="right">
+              <solar-typograph mstyle="normal" preset="fancy" size="16px" style="display: block;">
+                  Products
+              </solar-typograph>
+              <solar-typograph mstyle="normal" preset="description" style="display: block;">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nemo perferendis, exercitationem voluptatem tempora ipsam suscipit a ab odit provident, tenetur et eum recusandae totam vero magnam! Numquam, aperiam minus. 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nemo perferendis, exercitationem voluptatem tempora ipsam suscipit a ab odit provident, tenetur et eum recusandae totam vero magnam! Numquam, aperiam minus.
+              </solar-typograph>
+              <a routerLink="auth/login" mat-raised-button color="primary">Get started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
         <img src="../../assets/images/mobile-home.svg" id="mhome" alt="Mobile home view">
         <img src="../../assets/images/mobile-dashboard.svg" id="mdash" alt="Mobile dashboard view">
         
@@ -47,8 +69,8 @@
             <div class="item">
               <span class="indicator">1</span>
               <div class="details">
-                  <solar-typograph preset="fancy" mstyle="normal" style="text-align: end;margin: 0;">Tracking</solar-typograph>
-                  <solar-typograph preset="description" mstyle="normal" style="text-align: end; ">
+                  <solar-typograph preset="fancy" mstyle="normal" style="margin: 0;">Tracking</solar-typograph>
+                  <solar-typograph preset="description" mstyle="normal">
                       Keep track of all your devices with an intuitive
                       dashboard design.
                   </solar-typograph>
@@ -57,8 +79,8 @@
             <div class="item">
               <span class="indicator">2</span>
               <div class="details">
-                  <solar-typograph preset="fancy" mstyle="normal" style="text-align: end;margin: 0;">MONITORING</solar-typograph>
-                  <solar-typograph preset="description" mstyle="normal" style="text-align: end; ">
+                  <solar-typograph preset="fancy" mstyle="normal" style="margin: 0;">MONITORING</solar-typograph>
+                  <solar-typograph preset="description" mstyle="normal" style=" ">
                     Monitor your appliances anywhere, anytime on your mobile phone and web
                   </solar-typograph>
               </div>
@@ -66,8 +88,8 @@
             <div class="item">
               <span class="indicator">3</span>
               <div class="details">
-                  <solar-typograph preset="fancy" mstyle="normal" style="text-align: end;margin: 0;">MAINTENANCE</solar-typograph>
-                  <solar-typograph preset="description" mstyle="normal" style="text-align: end; ">
+                  <solar-typograph preset="fancy" mstyle="normal" style="margin: 0;">MAINTENANCE</solar-typograph>
+                  <solar-typograph preset="description" mstyle="normal" style=" ">
                       Manage and maintain  your energy consumption
                       right from your fingertips. 
                   </solar-typograph>
@@ -76,34 +98,34 @@
             <div class="item">
               <span class="indicator">4</span>
               <div class="details">
-                  <solar-typograph preset="fancy" mstyle="normal" style="text-align: end;margin: 0;">Tracking</solar-typograph>
-                  <solar-typograph preset="description" mstyle="normal" style="text-align: end; ">
+                  <solar-typograph preset="fancy" mstyle="normal" style="margin: 0;">Tracking</solar-typograph>
+                  <solar-typograph preset="description" mstyle="normal" style=" ">
                     Monitor your appliances anywhere, anytime on your mobile phone and web
                   </solar-typograph>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
-
-    <footer>
-      <div class="container">
-          <div class="content">
-              <div class="links">
-                  <a routerLink="auth/registration" mat-button color="accent">Go solar</a>
-                  <a routerLink="auth/login" mat-button color="primary">Login</a>
-                  <a href="#features" mat-button color="primary">Features</a>
-                  <a href="#top" mat-button color="primary">Top</a>
-                </div>
-                <div class="mock_logo">
-                  <span class="logo"></span>
-                  <div class="col">
-                      <span>SOLAR GRID</span>
-                      <span>We make green energy.</span>
-                  </div>
-                </div>
-          </div>
       </div>
-    </footer>
+    </section>
+
+  <footer>
+    <div class="container">
+        <div class="content">
+            <div class="links">
+                <a routerLink="auth/registration" mat-button color="accent">Go solar</a>
+                <a routerLink="auth/login" mat-button color="primary">Login</a>
+                <a href="#features" mat-button color="primary">Features</a>
+                <a href="#top" mat-button color="primary">Top</a>
+              </div>
+              <div class="mock_logo">
+                <span class="logo"></span>
+                <div class="col">
+                    <span>SOLAR GRID</span>
+                    <span>We make green energy.</span>
+                </div>
+              </div>
+        </div>
+    </div>
+  </footer>
 </div>

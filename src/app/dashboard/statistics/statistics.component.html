@@ -1,3 +1,25 @@
-<p>
-  statistics works!
-</p>
+<div class="dashboard-wrapper">
+  <div fxLayout="row" fxLayoutGap="23px">
+    <div class="graph">
+      <solar-typograph preset="description" mstyle="normal">Today</solar-typograph>
+      <solar-card width="full">
+        <div echarts [options]="options" class="demo-chart" style="height: 284px;"></div>
+      </solar-card>
+    </div>
+  
+    <div class="graph">
+      <solar-typograph preset="description" mstyle="normal">This week</solar-typograph>
+      <solar-card width="full">
+        
+      </solar-card>
+    </div>
+  </div>
+</div>
+
+<div class="scroll-x">
+  <solar-card></solar-card>
+  <solar-card></solar-card>
+  <solar-card></solar-card>
+  <solar-card></solar-card>
+  <solar-card></solar-card>
+</div>

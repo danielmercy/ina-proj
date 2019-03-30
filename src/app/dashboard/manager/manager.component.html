@@ -1,9 +1,31 @@
-<mat-toolbar class="mat-elevation-z7">
-  <span>Title</span>
+<mat-toolbar>
+  <button mat-icon-button color="primary">
+    <mat-icon class="mat-18">home</mat-icon>
+  </button>
   <span class="space"></span>
-  <span>Something</span>
+  <div class="logo">
+    <span></span>
+  </div>
+  <span class="space"></span>
+  <button mat-icon-button color="primary">
+      <mat-icon class="mat-18">notifications_active</mat-icon>
+  </button>
+  <div matRipple [matMenuTriggerFor]="menuRef" id="user">
+    <span class="avatar">
+      <img [src]="user.avatar" alt="avatar">
+    </span>
+    <span class="name">{{user.name}}</span>
+  </div>
+  
+  <mat-menu #menuRef="matMenu" x-position="after" y-position="below"
+            overlapTrigger="false">
+      <button mat-menu-item *ngFor="let menu of menus" [routerLink]="menu.link">
+          {{menu.title}}
+      </button>
+  </mat-menu>
 </mat-toolbar>
 
 <main>
   <router-outlet></router-outlet>
 </main>
+

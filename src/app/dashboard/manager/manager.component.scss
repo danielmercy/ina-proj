@@ -1,4 +1,73 @@
+$toolbar_height: 68px;
+
 main {
     background: var(--background);
     height: 100vh;
+    // padding: 40px;
+    position: relative;
+    top: $toolbar_height;
+    overflow: hidden;
+}
+
+mat-toolbar {
+    padding: 10px 40px;
+    align-items: center;
+    height: $toolbar_height;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0px 3px 6px rgba(#000000, .09) !important;
+    color: var(--foreground) !important;
+
+    .logo {
+        display: inline-flex;
+        align-items: center;
+        align-self: center;
+        transform: translateX(calc((100vw * 0.491) * 0.025 + 45px));
+        span {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background: var(--foreground);
+            border-radius: 10px;
+        }
+    }
+
+    #user {
+        padding: 0 4px;
+        margin-left: 8px;
+        box-sizing: border-box;
+        border-radius: 25px;
+        cursor: pointer;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        -webkit-tap-highlight-color: var(--accent);
+
+
+        span.avatar {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 5px;
+            border: 3px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        span.name {
+            font-size: small;
+            text-transform: lowercase;
+            font-weight: 600;
+        }
+    }
 }

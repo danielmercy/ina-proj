@@ -52,13 +52,15 @@ span.facebook, span.google, span.linkedin, span.office {
     max-width: calc(100vw * 0.9);
     width: 100%;
     margin: 0 auto;
+    position: relative;
+    z-index: 99;
 }
 
 
 button[mat-raised-button], button[mat-button], a[mat-raised-button], a[mat-button] {
     padding: 0 30px;
     border-radius: 25px;
-    width: 112px;
+    // width: 112px;
 }
 
 input[matInput] {
@@ -84,4 +86,11 @@ mat-slide-toggle {
             transition: all 50ms;
         }
     }
+}
+
+.dashboard-wrapper {
+    max-width: calc(100vw - 80px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
 }
